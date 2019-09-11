@@ -22,7 +22,7 @@ You may install Vue Carousel globally:
 
 ``` js
 import Vue from 'vue';
-import VueCarousel from 'vue-carousel';
+import VueCarousel from '@jambonn/vue-carousel';
 
 Vue.use(VueCarousel);
 ```
@@ -32,7 +32,7 @@ import Vue Carousel scss files via a single custom SCSS file:
 
 ``` js
 // custom.scss
-@import "~vue-carousel/src/css/vue-carousel.scss";
+@import "~@jambonn/vue-carousel/src/css/vue-carousel.scss";
 
 // app.js
 import 'custom.scss'
@@ -43,7 +43,7 @@ import 'custom.scss'
 Include the carousel directly into your component using import:
 
 ``` js
-import { Carousel, Slide } from 'vue-carousel';
+import { Carousel, Slide } from '@jambonn/vue-carousel';
 
 export default {
   ...
