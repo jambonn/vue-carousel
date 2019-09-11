@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com:jambonn/vue-carousel.git"
   },
-  "keywords": [],
+  "keywords": ["vue","carousel"],
   "author": "Jambon",
   "license": "MIT",
   "bugs": {
