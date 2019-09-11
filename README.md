@@ -28,16 +28,6 @@ Vue.use(VueCarousel);
 ```
 This will make **&lt;carousel&gt;** and **&lt;slide&gt;** available to all components within your Vue app.
 
-import Vue Carousel scss files via a single custom SCSS file:
-
-``` js
-// custom.scss
-@import "~@jambonn/vue-carousel/src/css/vue-carousel.scss";
-
-// app.js
-import 'custom.scss'
-```
-
 ### Local
 
 Include the carousel directly into your component using import:
