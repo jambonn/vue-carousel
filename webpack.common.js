@@ -1,16 +1,13 @@
+const merge = require('webpack-merge');
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const projectRoot = path.resolve(__dirname, './');
 
 const { VueLoaderPlugin } = require('vue-loader');
 
-module.exports = {
+const webpackConfig = {
+  mode: 'production',
   entry: ['./src/'],
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'vue-carousel.js',
-    library: 'VueCarousel',
-    libraryTarget: 'umd'
-  },
   resolve: {
     extensions: ['.js', '.vue'],
     modules: [
@@ -51,5 +48,30 @@ module.exports = {
       }
     ]
   },
-  plugins: [new VueLoaderPlugin()]
+  plugins: [
+    new VueLoaderPlugin(),
+    new UglifyJsPlugin({
+      sourceMap: false
+    })
+  ]
 }
+
+const serverConfig = merge(webpackConfig, {
+  target: 'node',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'vue-carousel.node.js'
+  },
+})
+
+const clientConfig = merge(webpackConfig, {
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'vue-carousel.js',
+    library: 'VueCarousel',
+    libraryTarget: 'umd'
+  },
+})
+
+module.exports = [ serverConfig, clientConfig ]

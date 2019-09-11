@@ -1,10 +1,15 @@
 {
   "name": "@jambonn/vue-carousel",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "description": "A flexible, responsive, touch-friendly carousel for Vue.js",
-  "main": "dist/vue-carousel.min.js",
+  "main": "dist/vue-carousel.node.js",
+  "module": "dist/vue-carousel.js",
+  "browser": {
+    "./dist/vue-carousel.node.js": "./dist/vue-carousel.node.browser.js",
+    "./dist/vue-carousel.js": "./dist/vue-carousel.browser.js"
+  },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.common.js",
     "lint": "prettier-eslint --write \"src/**/?(*.js|*.vue)\" || exit 1",
     "precommit": "lint-staged"
   },
@@ -14,7 +19,8 @@
   },
   "keywords": [
     "vue",
-    "carousel"
+    "carousel",
+    "slider"
   ],
   "author": "Jambon",
   "license": "MIT",
