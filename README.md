@@ -5,13 +5,13 @@
 ## Installation
 
 ``` bash
-npm install vue-carousel
+npm install @jambonn/vue-carousel
 ```
 
 or if you prefer yarn
 
 ``` bash
-yarn add vue-carousel
+yarn add @jambonn/vue-carousel
 ```
 
 ## Usage

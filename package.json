@@ -1,6 +1,6 @@
 {
-  "name": "vue-carousel",
-  "version": "0.19.0",
+  "name": "@jambonn/vue-carousel",
+  "version": "1.0.0",
   "description": "A flexible, responsive, touch-friendly carousel for Vue.js",
   "main": "dist/index.js",
   "style": "src/css/vue-carousel.css",
@@ -14,8 +14,8 @@
     "url": "git+ssh://git@github.com:jambonn/vue-carousel.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "",
+  "author": "Jambon",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jambonn/vue-carousel/issues"
   },
