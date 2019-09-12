@@ -63,7 +63,7 @@ const serverConfig = merge(webpackConfig, {
     filename: 'vue-carousel.node.js'
   },
   resolve: {
-    mainFields: ['module', 'main']
+    mainFields: ['module']
   },
 })
 
@@ -76,7 +76,7 @@ const clientConfig = merge(webpackConfig, {
     libraryTarget: 'umd'
   },
   resolve: {
-    mainFields: ['browser', 'module', 'main']
+    mainFields: ['main']
   },
 })
 

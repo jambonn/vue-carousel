@@ -2,8 +2,8 @@
   "name": "@jambonn/vue-carousel",
   "version": "0.0.1",
   "description": "A flexible, responsive, touch-friendly carousel for Vue.js",
-  "browser": "dist/vue-carousel.js",
   "module": "dist/vue-carousel.node.js",
+  "main": "dist/vue-carousel.js",
   "scripts": {
     "build": "webpack --config webpack.common.js",
     "lint": "prettier-eslint --write \"src/**/?(*.js|*.vue)\" || exit 1",
